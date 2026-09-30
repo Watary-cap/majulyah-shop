@@ -1,0 +1,28 @@
+{
+  "hero_image": "images/about2.jpg",
+  "intro": {
+    "title": "Bienvenue sur ma boutique-vitrine !",
+    "paragraphs": [
+      "Ici, vous pouvez découvrir toutes mes créations, faire votre shopping et composer votre panier en toute simplicité.",
+      "Ce site sert à générer votre **bon de commande personnalisé**. Une fois votre sélection validée, je reçois votre demande et je prépare vos articles sur-mesure. **Aucun paiement n’est demandé immédiatement.**",
+      "Dès que votre commande est prête, **je vous envoie un lien de paiement PayPal directement par mail**.",
+      "Les frais d'envoi en lettre suivie dépendent du poids de votre commande et vous seront précisés à ce moment-là (pour vous donner un ordre d'idée, comptez par exemple 1,80 € pour les envois jusqu'à 20g, et 3,60 € pour la tranche de 20g à 100g). Les envois se font ensuite soigneusement en lettre suivie.",
+      "*Commandez l'esprit léger, payez en toute confiance !*"
+    ]
+  },
+  "about": {
+    "subtitle": "L'Histoire Maju’Lyah",
+    "title": "Fait main avec passion & douceur",
+    "paragraphs": [
+      "Maju’Lyah est née d'une grande passion pour la papeterie et l'organisation du quotidien.",
+      "Tout a commencé en créant un support d'organisation pour l'entrée en 6ème de mon fils. Partagé sur les réseaux, ce projet a rencontré un beau succès et est devenu notre best-seller, notamment grâce à nos stickers d'organisation.",
+      "Aujourd'hui, j'ai créé cette vitrine pour vous partager tout ce que j'aime : des stickers fonctionnels aux carnets de papeterie soignés. Chaque création est pensée pour apporter sérénité et élégance dans votre vie de tous les jours."
+    ],
+    "image": "images/about2.jpg"
+  },
+  "contact": {
+    "title": "Une question ?",
+    "text": "Une hésitation sur un produit, une demande de personnalisation ou juste l'envie de dire bonjour ? Écrivez-nous !",
+    "email": "majulyah3121@gmail.com"
+  }
+}

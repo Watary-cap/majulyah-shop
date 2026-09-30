@@ -1,0 +1,135 @@
+media:
+  - name: images
+    label: Images du site
+    input: images
+    output: images
+    categories: [image]
+    extensions: [jpg, jpeg, png, webp, gif]
+
+content:
+  - name: boutique
+    label: Boutique
+    type: group
+    items:
+      - name: catalogue
+        label: Catalogue produits
+        type: file
+        path: product.json
+        format: json
+        fields:
+          - name: categories
+            label: Catégories
+            type: object
+            list: true
+            fields:
+              - name: name
+                label: Nom
+                type: string
+                required: true
+          - name: products
+            label: Produits
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - name: name
+                label: Nom du produit
+                type: string
+                required: true
+              - name: category
+                label: Catégorie
+                type: string
+              - name: price
+                label: Prix (€)
+                type: number
+              - name: image
+                label: Image
+                type: image
+                options:
+                  media: images
+                  path: images
+              - name: description
+                label: Description
+                type: text
+              - name: visible
+                label: Visible dans la boutique
+                type: boolean
+              - name: selection_mode
+                label: Mode de choix
+                type: select
+                options:
+                  values:
+                    - name: single
+                      label: Une option
+                    - name: multi_color
+                      label: Options et couleur
+              - name: variants_label
+                label: Titre des options
+                type: string
+              - name: variants
+                label: Options proposées
+                type: string
+                list: true
+              - name: colors
+                label: Couleurs proposées
+                type: string
+                list: true
+
+      - name: site
+        label: Textes du site
+        type: file
+        path: site.json
+        format: json
+        fields:
+          - name: hero_image
+            label: Image de bannière
+            type: image
+            options:
+              media: images
+              path: images
+          - name: intro
+            label: Présentation
+            type: object
+            fields:
+              - name: title
+                label: Titre
+                type: string
+              - name: paragraphs
+                label: Paragraphes
+                type: rich-text
+                list: true
+          - name: about
+            label: À propos
+            type: object
+            fields:
+              - name: subtitle
+                label: Sous-titre
+                type: string
+              - name: title
+                label: Titre
+                type: string
+              - name: paragraphs
+                label: Paragraphes
+                type: rich-text
+                list: true
+              - name: image
+                label: Image
+                type: image
+                options:
+                  media: images
+                  path: images
+          - name: contact
+            label: Contact
+            type: object
+            fields:
+              - name: title
+                label: Titre
+                type: string
+              - name: text
+                label: Texte
+                type: text
+              - name: email
+                label: Adresse e-mail
+                type: string

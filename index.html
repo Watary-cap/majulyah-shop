@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Maju’Lyah | Papeterie & Organisation Artisanale</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =========================================================
+         ENTÊTE / NAVIGATION
+         ========================================================= -->
+
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#accueil" class="brand-logo"> Maju’Lyah </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#accueil" class="nav-item"> Accueil </a>
+
+          <a href="#boutique" class="nav-item"> Boutique </a>
+
+          <a href="#apropos" class="nav-item"> À propos </a>
+
+          <a href="#contact" class="nav-item"> Contact </a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="cart-icon-btn"
+            id="openCartBtn"
+            aria-label="Voir mon panier"
+            type="button"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"
+              ></path>
+
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+
+            <span class="cart-count" id="cartCount"> 0 </span>
+          </button>
+
+          <button
+            class="mobile-menu-toggle"
+            id="mobileMenuBtn"
+            aria-label="Menu"
+            type="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =========================================================
+         BANNIÈRE (Image seule sans texte)
+         ========================================================= -->
+
+    <section id="accueil" class="hero-section"></section>
+
+    <!-- =========================================================
+         PRESENTATION
+         ========================================================= -->
+
+    <section class="intro-section">
+      <div class="container text-center max-w-700">
+        <h2 class="section-title">Bienvenue sur ma boutique-vitrine !</h2>
+
+        <div class="title-underline"></div>
+
+        <p class="intro-text" style="margin-bottom: 20px">
+          Ici, vous pouvez découvrir toutes mes créations, faire votre shopping
+          et composer votre panier en toute simplicité.
+        </p>
+
+        <p class="intro-text" style="margin-bottom: 20px">
+          Ce site sert à générer votre
+          <strong>bon de commande personnalisé</strong>. Une fois votre
+          sélection validée, je reçois votre demande et je prépare vos articles
+          sur-mesure.
+          <strong>Aucun paiement n’est demandé immédiatement.</strong>
+        </p>
+
+        <p class="intro-text" style="margin-bottom: 20px">
+          Dès que votre commande est prête,
+          <strong
+            >je vous envoie un lien de paiement PayPal directement par
+            mail</strong
+          >.
+        </p>
+
+        <p class="intro-text" style="margin-bottom: 20px">
+          Les frais d'envoi en lettre suivie dépendent du poids de votre
+          commande et vous seront précisés à ce moment-là (pour vous donner un
+          ordre d'idée, comptez par exemple 1,80 € pour les envois jusqu'à 20g,
+          et 3,60 € pour la tranche de 20g à 100g). Les envois se font ensuite
+          soigneusement en lettre suivie.
+        </p>
+
+        <p class="intro-text" style="font-style: italic">
+          Commandez l'esprit léger, payez en toute confiance !
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         BOUTIQUE
+         ========================================================= -->
+
+    <section id="boutique" class="shop-section">
+      <div class="container">
+        <h2 class="section-title text-center">Nos Créations</h2>
+
+        <div class="title-underline"></div>
+
+        <div class="category-filters" id="categoryFilters">
+          <button class="filter-btn active" data-category="all" type="button">
+            Toutes
+          </button>
+
+          <button class="filter-btn" data-category="Nouveautés" type="button">
+            Nouveautés
+          </button>
+
+          <button class="filter-btn" data-category="Organisation" type="button">
+            Organisation
+          </button>
+
+          <button class="filter-btn" data-category="Papeterie" type="button">
+            Papeterie
+          </button>
+
+          <button class="filter-btn" data-category="Stickers" type="button">
+            Stickers
+          </button>
+
+          <button class="filter-btn" data-category="Mailow Club" type="button">
+            Mailow Club
+          </button>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         À PROPOS
+         ========================================================= -->
+
+    <section id="apropos" class="about-section">
+      <div class="container about-grid">
+        <div class="about-image-wrapper">
+          <img
+            src="images/about2.jpg"
+            alt="Atelier Maju'Lyah"
+            class="about-img"
+            onerror="
+              this.src =
+                'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80'
+            "
+          />
+        </div>
+
+        <div class="about-text-content">
+          <span class="sub-subtitle"> L'Histoire Maju’Lyah </span>
+
+          <h2 class="section-title text-left">
+            Fait main avec passion & douceur
+          </h2>
+
+          <div class="title-underline left"></div>
+
+          <p>
+            Maju’Lyah est née d'une grande passion pour la papeterie et
+            l'organisation du quotidien.
+          </p>
+
+          <p>
+            Tout a commencé en créant un support d'organisation pour l'entrée en
+            6ème de mon fils. Partagé sur les réseaux, ce projet a rencontré un
+            beau succès et est devenu notre best-seller, notamment grâce à nos
+            stickers d'organisation.
+          </p>
+
+          <p>
+            Aujourd'hui, j'ai créé cette vitrine pour vous partager tout ce que
+            j'aime : des stickers fonctionnels aux carnets de papeterie soignés.
+            Chaque création est pensée pour apporter sérénité et élégance dans
+            votre vie de tous les jours.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
+
+    <section id="contact" class="contact-section">
+      <div class="container max-w-600 text-center">
+        <h2 class="section-title">Une question ?</h2>
+
+        <div class="title-underline"></div>
+
+        <p class="contact-sub">
+          Une hésitation sur un produit, une demande de personnalisation ou
+          juste l'envie de dire bonjour ? Écrivez-nous !
+        </p>
+
+        <a href="mailto:majulyah3121@gmail.com" class="contact-email-link">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            ></path>
+
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+
+          majulyah3121@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <span class="footer-logo"> Maju’Lyah </span>
+
+          <p>Organisation & papeterie artisanales.</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="#accueil">Accueil</a>
+          <a href="#boutique">Boutique</a>
+          <a href="#apropos">À propos</a>
+          <a href="#contact">Contact</a>
+
+          <a
+            href="#mentions"
+            onclick="
+              alert(
+                'Mentions Légales : Maju’Lyah - Entreprise Artisanale France. Email: majulyah3121@gmail.com',
+              );
+              return false;
+            "
+          >
+            Mentions Légales
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy;
+          <span id="year"></span>
+          Maju’Lyah. Tous droits réservés.
+        </p>
+      </div>
+    </footer>
+
+    <!-- =========================================================
+         MODALE PRODUIT
+         ========================================================= -->
+
+    <div class="modal" id="productModal" aria-hidden="true">
+      <div class="modal-overlay" id="closeProductModalBg"></div>
+
+      <div class="modal-card">
+        <button
+          class="modal-close"
+          id="closeProductModalBtn"
+          type="button"
+          aria-label="Fermer"
+        >
+          &times;
+        </button>
+
+        <div class="product-detail-grid">
+          <div class="product-detail-image">
+            <img src="" id="modalImg" alt="Produit" />
+          </div>
+
+          <div class="product-detail-info">
+            <span class="product-badge" id="modalCategory"></span>
+
+            <h3 id="modalTitle" class="modal-title"></h3>
+
+            <p class="modal-price" id="modalPrice"></p>
+
+            <p class="modal-description" id="modalDescription"></p>
+
+            <div class="form-group" id="variantGroup" style="display: none">
+              <label for="modalVariantSelect">
+                Choisir une finition / option :
+              </label>
+
+              <select id="modalVariantSelect" class="form-input"></select>
+            </div>
+
+            <div class="form-group">
+              <label for="modalQty"> Quantité : </label>
+
+              <input
+                type="number"
+                id="modalQty"
+                class="form-input qty-input"
+                value="1"
+                min="1"
+                max="99"
+              />
+            </div>
+
+            <button
+              class="btn btn-primary btn-block"
+              id="modalAddToCartBtn"
+              type="button"
+            >
+              Ajouter à ma commande
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         PANIER
+         ========================================================= -->
+
+    <div class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-drawer-overlay" id="closeCartBg"></div>
+
+      <div class="cart-drawer-content">
+        <div class="cart-header">
+          <h3>Mon Bon de Commande</h3>
+
+          <button
+            class="close-drawer-btn"
+            id="closeCartBtn"
+            type="button"
+            aria-label="Fermer le panier"
+          >
+            &times;
+          </button>
+        </div>
+
+        <!-- ÉTAPE 1 -->
+
+        <div id="cartStep1" class="cart-step active">
+          <div class="cart-items-list" id="cartItemsList"></div>
+
+          <div class="cart-footer">
+            <div class="cart-total-row">
+              <span> Total (hors livraison) : </span>
+
+              <span class="cart-total-price" id="cartTotalPrice"> 0,00 € </span>
+            </div>
+
+            <button
+              class="btn btn-primary btn-block"
+              id="goToCheckoutBtn"
+              type="button"
+            >
+              Remplir mes coordonnées
+            </button>
+          </div>
+        </div>
+
+        <!-- ÉTAPE 2 -->
+
+        <div id="cartStep2" class="cart-step">
+          <button class="back-btn" id="backToCartBtn" type="button">
+            &larr; Retour à la commande
+          </button>
+
+          <h4 class="checkout-subtitle">Coordonnées de livraison</h4>
+
+          <!-- FORMSPREE -->
+
+          <form
+            id="orderForm"
+            action="https://formspree.io/f/xeaojpzq"
+            method="POST"
+            novalidate
+          >
+            <!-- REDIRECTION APRÈS ENVOI -->
+
+            <input
+              type="hidden"
+              name="_next"
+              value="https://majulyah3121-commits.github.io/majulyah-site/?commande=envoyee"
+            />
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nouvelle commande Maju’Lyah"
+            />
+
+            <!-- RÉCAPITULATIF -->
+
+            <input
+              type="hidden"
+              name="Recapitulatif_Commande"
+              id="hiddenOrderSummary"
+            />
+
+            <input type="hidden" name="Total_Commande" id="hiddenOrderTotal" />
+
+            <!-- PRÉNOM / NOM -->
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom"> Prénom * </label>
+
+                <input
+                  type="text"
+                  id="prenom"
+                  name="Prenom"
+                  class="form-input"
+                  required
+                  autocomplete="given-name"
+                  placeholder="ex: Julie"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="nom"> Nom * </label>
+
+                <input
+                  type="text"
+                  id="nom"
+                  name="Nom"
+                  class="form-input"
+                  required
+                  autocomplete="family-name"
+                  placeholder="ex: Dupont"
+                />
+              </div>
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+              <label for="email"> Adresse E-mail * </label>
+
+              <input
+                type="email"
+                id="email"
+                name="Email"
+                class="form-input"
+                required
+                autocomplete="email"
+                placeholder="ex: julie@example.com"
+              />
+            </div>
+
+            <!-- TÉLÉPHONE -->
+
+            <div class="form-group">
+              <label for="telephone"> Téléphone (facultatif) </label>
+
+              <input
+                type="tel"
+                id="telephone"
+                name="Telephone"
+                class="form-input"
+                autocomplete="tel"
+                placeholder="ex: 06 12 34 56 78"
+              />
+            </div>
+
+            <!-- ADRESSE -->
+
+            <div class="form-group">
+              <label for="adresse"> Adresse postale * </label>
+
+              <input
+                type="text"
+                id="adresse"
+                name="Adresse"
+                class="form-input"
+                required
+                autocomplete="street-address"
+                placeholder="ex: 12 rue de la Paix"
+              />
+            </div>
+
+            <!-- COMPLÉMENT -->
+
+            <div class="form-group">
+              <label for="complement">
+                Complément d'adresse (facultatif)
+              </label>
+
+              <input
+                type="text"
+                id="complement"
+                name="Complement_Adresse"
+                class="form-input"
+                autocomplete="address-line2"
+                placeholder="ex: Appt 4B, Résidence les Roses"
+              />
+            </div>
+
+            <!-- CODE POSTAL / VILLE -->
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="code_postal"> Code Postal * </label>
+
+                <input
+                  type="text"
+                  id="code_postal"
+                  name="Code_Postal"
+                  class="form-input"
+                  required
+                  autocomplete="postal-code"
+                  inputmode="numeric"
+                  placeholder="ex: 31000"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="ville"> Ville * </label>
+
+                <input
+                  type="text"
+                  id="ville"
+                  name="Ville"
+                  class="form-input"
+                  required
+                  autocomplete="address-level2"
+                  placeholder="ex: Toulouse"
+                />
+              </div>
+            </div>
+
+            <!-- MESSAGE -->
+
+            <div class="form-group">
+              <label for="message"> Message ou remarque (facultatif) </label>
+
+              <textarea
+                id="message"
+                name="Message"
+                class="form-input"
+                rows="3"
+                placeholder="Une précision à ajouter à votre commande ?"
+              ></textarea>
+            </div>
+
+            <!-- RGPD -->
+
+            <div class="form-group checkbox-group">
+              <input
+                type="checkbox"
+                id="rgpdCheck"
+                name="RGPD_Accepte"
+                value="Oui"
+                required
+              />
+
+              <label for="rgpdCheck">
+                J’accepte que mes informations soient utilisées uniquement pour
+                traiter ma commande. *
+              </label>
+            </div>
+
+            <!-- MESSAGE -->
+
+            <div id="formStatusMessage" class="form-status-msg"></div>
+
+            <!-- BOUTON -->
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-block"
+              id="submitOrderBtn"
+            >
+              Valider et envoyer la commande
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOTIFICATION -->
+
+    <div id="toastNotification" class="toast">Produit ajouté au panier !</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
