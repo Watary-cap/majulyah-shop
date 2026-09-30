@@ -14,6 +14,9 @@
     },
     {
       "name": "Mailow Club"
+    },
+    {
+      "name": "Cat TEST"
     }
   ],
   "products": [
@@ -221,7 +224,7 @@
     {
       "name": "Kit Papeterie 'Mailow Routine'",
       "category": "Mailow Club",
-      "price": 29.9,
+      "price": 30.9,
       "description": "Un kit complet comprenant un bloc-notes, une planche de stickers, deux marque-pages et un carnet exclusif Mailow Club.",
       "visible": true,
       "selection_mode": "single",
