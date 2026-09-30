@@ -889,71 +889,8 @@ FORMULAIRE FORMSPREE
 ---------------------------------------------------------------------- */
 
   if (orderForm) {
-    orderForm.addEventListener("submit", async (event) => {
-      event.preventDefault();
-
-      if (orderForm.action.includes("VOTRE_ID_FORMSPREE_ICI")) {
-        if (formStatusMessage) {
-          formStatusMessage.className = "form-status-msg error";
-          formStatusMessage.textContent =
-            "Attention : Remplacez VOTRE_ID_FORMSPREE_ICI par votre identifiant Formspree.";
-        }
-        return;
-      }
-
-      const formData = new FormData(orderForm);
-      const submitBtn = document.getElementById("submitOrderBtn");
-
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Envoi de la commande en cours...";
-      }
-
-      try {
-        const response = await fetch(orderForm.action, {
-          method: "POST",
-          body: formData,
-          headers: { Accept: "application/json" },
-        });
-
-        if (response.ok) {
-          if (formStatusMessage) {
-            formStatusMessage.className = "form-status-msg success";
-            formStatusMessage.textContent =
-              "Merci ! Votre commande a été envoyée avec succès.";
-          }
-
-          orderForm.reset();
-          cart = [];
-          updateCartUI();
-
-          setTimeout(() => {
-            cartDrawer?.classList.remove("active");
-            cartStep2?.classList.remove("active");
-            cartStep1?.classList.add("active");
-
-            if (formStatusMessage) {
-              formStatusMessage.className = "form-status-msg";
-              formStatusMessage.textContent = "";
-            }
-          }, 4000);
-        } else {
-          throw new Error("Erreur Formspree");
-        }
-      } catch (error) {
-        console.error("Erreur d'envoi :", error);
-
-        if (formStatusMessage) {
-          formStatusMessage.className = "form-status-msg error";
-          formStatusMessage.textContent =
-            "Une erreur est survenue lors de l'envoi. Réessayez.";
-        }
-      } finally {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = "Valider et envoyer la commande";
-        }
-      }
+    orderForm.addEventListener("submit", () => {
+      prepareOrderSummary();
     });
   }
 }
