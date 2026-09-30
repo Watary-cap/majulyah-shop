@@ -18,7 +18,7 @@
   ],
   "products": [
     {
-      "name": "Stickers 6ème - Écriture TEEBRUSH",
+      "name": "Stickers 6ème - Écriture TEST",
       "category": "Organisation",
       "price": 12,
       "image": "images/ecriture-teebrush.png",
@@ -174,51 +174,60 @@
       "name": "Set de Cartes Poétiques & Enveloppes",
       "category": "Mailow Club",
       "price": 12,
-      "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80",
       "description": "Coffret de cartes d'art au fini mat accompagnées de leurs enveloppes.",
       "visible": true,
       "selection_mode": "single",
-      "variants": ["Lot de 5 cartes", "Lot de 10 cartes"]
+      "variants": [
+        "Lot de 5 cartes",
+        "Lot de 10 cartes"
+      ]
     },
     {
       "name": "Planner Non Daté 'Sérénité'",
       "category": "Nouveautés",
       "price": 24,
-      "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
       "description": "Le compagnon idéal pour planifier votre année à votre rythme, sans dates pré-remplies.",
       "visible": true,
       "selection_mode": "single",
-      "variants": ["Reliure Dorée", "Reliure Rose Poudré"]
+      "variants": [
+        "Reliure Dorée",
+        "Reliure Rose Poudré"
+      ]
     },
     {
       "name": "Marque-page en Laiton & Ruban",
       "category": "Nouveautés",
       "price": 6.5,
-      "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=600&q=80",
       "description": "Élégant marque-page en métal finition dorée avec son ruban terracotta.",
       "visible": true,
       "selection_mode": "single",
-      "variants": ["Ruban Terracotta", "Ruban Sauge"]
+      "variants": [
+        "Ruban Terracotta",
+        "Ruban Sauge"
+      ]
     },
     {
       "name": "Stickers Citations & Pensées",
       "category": "Stickers",
       "price": 5.2,
-      "image": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=600&q=80",
       "description": "Mots doux, citations motivantes et calligraphie fine.",
       "visible": true,
       "selection_mode": "single",
-      "variants": ["Finition Matte", "Finition Glossy"]
+      "variants": [
+        "Finition Matte",
+        "Finition Glossy"
+      ]
     },
     {
       "name": "Kit Papeterie 'Mailow Routine'",
       "category": "Mailow Club",
       "price": 29.9,
-      "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80",
       "description": "Un kit complet comprenant un bloc-notes, une planche de stickers, deux marque-pages et un carnet exclusif Mailow Club.",
       "visible": true,
       "selection_mode": "single",
-      "variants": ["Box Complète"]
+      "variants": [
+        "Box Complète"
+      ]
     }
   ]
 }
