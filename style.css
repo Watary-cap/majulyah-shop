@@ -48,6 +48,7 @@ body {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 0;
 }
 .max-w-600 {
   max-width: 600px;
@@ -152,17 +153,7 @@ body {
    ========================================================================== */
 
 .hero-section {
-  width: 100%;
-  min-height: 45vh;
-  max-height: 450px;
-  background-image: url("images/about2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  display: none;
 }
 
 .hero-overlay {
@@ -264,7 +255,18 @@ body {
 .shop-section,
 .about-section,
 .contact-section {
-  padding: 60px 0;
+  padding: 0 0 60px;
+}
+
+.intro-section .container {
+  padding-top: 0;
+}
+
+.intro-section img {
+  display: block;
+  width: min(440px, 100%);
+  margin: 0 auto 18px;
+  border-radius: 16px;
 }
 
 .intro-text {

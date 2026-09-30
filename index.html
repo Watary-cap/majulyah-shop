@@ -83,14 +83,25 @@
          BANNIÈRE (Image seule sans texte)
          ========================================================= -->
 
-    <section id="accueil" class="hero-section"></section>
+    <section class="hero-section" aria-hidden="true"></section>
 
     <!-- =========================================================
          PRESENTATION
          ========================================================= -->
 
-    <section class="intro-section">
+    <section id="accueil" class="intro-section">
       <div class="container text-center max-w-700">
+        <img
+          src="images/garde.png"
+          alt="Garde Maju'Lyah"
+          style="
+            display: block;
+            width: min(500px, 100%);
+            margin: 0 auto 22px;
+            border-radius: 16px;
+          "
+        />
+
         <h2 class="section-title">Bienvenue sur ma boutique-vitrine !</h2>
 
         <div class="title-underline"></div>
@@ -178,12 +189,13 @@
       <div class="container about-grid">
         <div class="about-image-wrapper">
           <img
-            src="images/about2.jpg"
-            alt="Atelier Maju'Lyah"
-            class="about-img"
-            onerror="
-              this.src =
-                'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80'
+            src="images/garde.png"
+            alt="Garde Maju'Lyah"
+            style="
+              display: block;
+              width: min(500px, 100%);
+              margin: 0 auto 22px;
+              border-radius: 16px;
             "
           />
         </div>
