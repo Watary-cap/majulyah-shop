@@ -234,7 +234,7 @@
       "category": "Papeterie",
       "price": 50,
       "description": "JE SUIS UN TEST",
-      "visible": false,
+      "visible": true,
       "selection_mode": "single",
       "variants_label": "TEST 1,TEST 2",
       "variants": [
