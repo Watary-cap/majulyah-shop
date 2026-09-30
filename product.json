@@ -228,6 +228,24 @@
       "variants": [
         "Box Complète"
       ]
+    },
+    {
+      "name": "Test",
+      "category": "Papeterie",
+      "price": 50,
+      "description": "JE SUIS UN TEST",
+      "visible": false,
+      "selection_mode": "single",
+      "variants_label": "TEST 1,TEST 2",
+      "variants": [
+        "LIVRE ",
+        "BOUQUIN"
+      ],
+      "colors": [
+        "ROUGE",
+        "BLEU",
+        "VERT"
+      ]
     }
   ]
 }
