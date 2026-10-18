@@ -249,6 +249,25 @@
         "BLEU",
         "VERT"
       ]
+    },
+    {
+      "name": "Un test",
+      "category": "Organisation",
+      "price": 67,
+      "image": "images/Screenshot 2026-10-14 154528.png",
+      "description": "test",
+      "visible": true,
+      "selection_mode": "single",
+      "variants_label": "Nombres",
+      "variants": [
+        "1 STICKER",
+        "2 STICKER"
+      ],
+      "colors": [
+        "rouge",
+        "vert",
+        "bleu"
+      ]
     }
   ]
 }
