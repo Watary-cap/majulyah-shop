@@ -21,57 +21,6 @@
   ],
   "products": [
     {
-      "name": "Stickers 6ème - Écriture TEST",
-      "category": "Organisation",
-      "price": 12,
-      "image": "images/Capture d'écran 2026-09-23 164435.png",
-      "description": "Des stickers personnalisés pour organiser tes affaires scolaires.",
-      "visible": true,
-      "selection_mode": "multi_color",
-      "variants": [
-        "Français",
-        "Anglais",
-        "Espagnol",
-        "Allemand",
-        "Latin",
-        "Mathématiques",
-        "Physique-Chimie",
-        "Sciences physiques",
-        "Physique",
-        "SVT",
-        "Arts plastiques",
-        "Musique",
-        "Sport",
-        "EMC",
-        "Histoire-Géographie",
-        "Technologie",
-        "Vie de classe",
-        "CDI",
-        "Fournitures scolaires",
-        "Divers"
-      ],
-      "colors": [
-        "Bleu foncé",
-        "Bleu clair",
-        "Bleu canard",
-        "Vert clair",
-        "Vert foncé",
-        "Orange",
-        "Rouge clair",
-        "Rouge foncé",
-        "Jaune clair",
-        "Jaune foncé",
-        "Gris clair",
-        "Gris foncé",
-        "Noir",
-        "Blanc",
-        "Rose",
-        "Violet clair",
-        "Violet foncé",
-        "Marron"
-      ]
-    },
-    {
       "name": "Stickers 6ème - Écriture KARLEY",
       "category": "Organisation",
       "price": 12,
@@ -230,43 +179,6 @@
       "selection_mode": "single",
       "variants": [
         "Box Complète"
-      ]
-    },
-    {
-      "name": "Test",
-      "category": "Papeterie",
-      "price": 50,
-      "description": "JE SUIS UN TEST",
-      "visible": true,
-      "selection_mode": "single",
-      "variants_label": "TEST 1,TEST 2",
-      "variants": [
-        "LIVRE ",
-        "BOUQUIN"
-      ],
-      "colors": [
-        "ROUGE",
-        "BLEU",
-        "VERT"
-      ]
-    },
-    {
-      "name": "Un test",
-      "category": "Organisation",
-      "price": 67,
-      "image": "images/Screenshot 2026-10-14 154528.png",
-      "description": "test",
-      "visible": true,
-      "selection_mode": "single",
-      "variants_label": "Nombres",
-      "variants": [
-        "1 STICKER",
-        "2 STICKER"
-      ],
-      "colors": [
-        "rouge",
-        "vert",
-        "bleu"
       ]
     }
   ]
